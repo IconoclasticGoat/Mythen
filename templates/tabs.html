@@ -1,13 +1,10 @@
 <div>
-	<div class="navbar">
-		<div class="tabtable navbar-inner">
-			<ul class="nav nav-tabs">
-				<li ng-repeat="pane in panes" ng-class="{active:pane.selected}">
-					<a href="" ng-click="select(pane)" id="{{pane.id}}Link">{{pane.title}}</a>
-				</li>
-			</ul>
-			
-		</div>
+	<div class="holo-action-bar">
+		<ul class="holo-fixed-tabs">
+			<li ng-repeat="pane in panes" ng-class="{active: pane.selected, 'current-tab': pane.selected}">
+				<a href="" ng-click="select(pane)" id="{{pane.id}}Link">{{pane.title}}</a>
+			</li>
+		</ul>
 	</div>
 	<div class="tab-content" ng-transclude></div>
 </div>
