@@ -1,0 +1,11 @@
+.charlist {
+	background-color: black;
+}
+
+.charline{
+	width: 100%;
+	color: white;
+	background-color: black;
+	font-size: 25px;
+	line-height: 50px;
+}
