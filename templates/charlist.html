@@ -1,17 +1,21 @@
-<div>
-	<ul class="charlist">
-		<li ng-repeat="c in characters" class="charline" ng-mousedown="onMouseDown(c)" ng-mouseup="onMouseUp(c)">
-			<span ng-click="selectCharacter(c)">{{c.name}}, {{c.race}}
-				<span ng-repeat="class in c.classes">{{class.className}} {{class.levels}} </span>
-			</span>
+<div ng-show="showList">
+	<ul class="holo-list">
+		<li ng-repeat="c in characters" class="charLine" ng-mousedown="onMouseDown(c)" ng-mouseup="onMouseUp(c)">
+			<div ng-click="selectCharacter(c)">
+				<span>{{c.name}}, {{c.race}}
+					<span ng-repeat="class in c.classes">{{class.className}} {{class.levels}} </span>
+				</span>
+			</div>
 		</li>
 	</ul>
-	<button type="button" ng-click="newCharacter()" class="btn">New Character</button>
+	<button type="button" ng-click="newCharacter()" class="holo-button">New Character</button>
 
 	<div id="deleteConfirm" class="modal hide">
-		Delete this character?<br/>
-		You will lose this information forever.
-		<button type="button" ng-click="hideConfirmModal()">No</button>
-		<button type="button" ng-click="deleteCharacter()">Yes</button>
+		<div>
+			Delete this character?<br/>
+			You will lose this information forever.
+			<button type="button" ng-click="hideConfirmModal()" class="holo-button">No</button>
+			<button type="button" ng-click="deleteCharacter()" class="holo-button">Yes</button>
+		</div>
 	</div>
 </div>

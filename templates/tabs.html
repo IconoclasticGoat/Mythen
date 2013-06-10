@@ -1,8 +1,11 @@
-<div>
+<div ng-show="showTabs">
 	<div class="holo-action-bar">
+		<h1>
+			<a href="#" class="holo-up" ng-click="backToList()">Back</a>
+		</h1>
 		<ul class="holo-fixed-tabs">
-			<li ng-repeat="pane in panes" ng-class="{active: pane.selected, 'current-tab': pane.selected}">
-				<a href="" ng-click="select(pane)" id="{{pane.id}}Link">{{pane.title}}</a>
+			<li ng-repeat="pane in panes" ng-class="{active: pane.selected}">
+				<a href="" ng-click="select(pane)" ng-class="{'current-tab': pane.selected}" id="{{pane.id}}Link">{{pane.title}}</a>
 			</li>
 		</ul>
 	</div>

@@ -1,0 +1,10 @@
+<div>
+	<ul class="holo-list">
+		<li ng-repeat="c in character.classes" class="classLine">
+			<div>
+				<span>{{c.className}}</span>
+				<input type="number" class="smallNumber" ng-model="c.levels" min="1" max="99"></input>
+			</div>
+		</li>
+	</ul>
+</div>

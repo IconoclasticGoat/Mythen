@@ -1,8 +1,18 @@
 <div>
-	<ul>
-		<li>Name: <span ng-click="editName = !editName" ng-hide="editName">{{character.name}}</span>
-			<input type="text" ng-model="character.name" ng-show="editName" ng-placeholder="character.name">
-			<button type="button" ng-click="doneEditing()" ng-show="editName">Ok</button>
+	<ul class="holo-list">
+		<li>
+			<div class="holo-field">
+				Name: <span ng-click="editName = !editName" ng-hide="editName">{{character.name}}</span>
+				<div class="holo-field-bracket"></div>
+				<input type="text" ng-model="character.name" ng-show="editName" ng-placeholder="character.name">
+				<button type="button" ng-click="doneEditing()" ng-show="editName" class="holo-button">Ok</button>
+			</div>
+			<div class="holo-field">
+				Race: <span ng-click="editRace = !editRace" ng-hide="editRace">{{character.race}}</span>
+				<div class="holo-field-bracket"></div>
+				<input type="text" ng-model="character.race" ng-show="editRace" ng-placeholder="character.race">
+				<button type="button" ng-click="doneEditing()" ng-show="editRace" class="holo-button">Ok</button>
+			</div>
 		</li>
 	</ul>	
 </div>

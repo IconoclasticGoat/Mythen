@@ -7,9 +7,11 @@ mythen.directive('basics', ['$rootScope', 'charService', function($rootScope, ch
 	    scope: true,
 	    controller: function($scope, $element, $attrs) {
 	    	$scope.editName = false;
+	    	$scope.editRace = false;
 
 	    	$scope.doneEditing = function(){
 	    		$scope.editName = false;
+	    		$scope.editRace = false;
 
 	    		charService.saveCharacters();
 	    	};

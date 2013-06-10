@@ -127,11 +127,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 .holo-action-bar { border-bottom: 2px solid; overflow: hidden; width: 100%; z-index: 100; }
 .holo-action-bar h1 { margin: 0; line-height: 48px; font-size: 24px; font-weight: normal; }
 .holo-action-bar h1 a { display: inline-block; padding: 0 16px; }
-.holo-action-bar h1 a.holo-up:before { content:""; width:24px; height: 48px; margin-left: -16px; display:block; float:left; background:url(../images/black/ic_up.png) no-repeat center center; }
+.holo-action-bar h1 a.holo-up:before { content:""; width:24px; height: 48px; margin-left: -16px; display:block; float:left; background:url(holo/images/black/ic_up.png) no-repeat center center; }
 .holo-action-bar li { list-style:none; }
 
 .holo-fixed-tabs {
-	height: 48px;
+	/*height: 48px;*/
+	height: 0px;
 }
 .holo-fixed-tabs ul {
 	margin:0; padding:0;
@@ -317,8 +318,8 @@ select.holo-spinner option { height: 32px; border-top: 1px #444 solid; }
 .holo-dark .holo-action-bar h1 a.holo-up:before {
 	opacity:.8;
 }
-.holo-dark .holo-action-overflow { background-image: url(../images/white/ic_action_overflow.png); }
-.holo-dark .holo-search { background-image: url(../images/white/ic_action_search.png); }
+.holo-dark .holo-action-overflow { background-image: url(holo/images/white/ic_action_overflow.png); }
+.holo-dark .holo-search { background-image: url(../images/white/ic_action_search.png); } /* TODO: Wtf, are these other paths broken? */
 .holo-dark .holo-action-bar h1 a.holo-up:before { background-image:url(../images/white/ic_up.png); }
 
 
